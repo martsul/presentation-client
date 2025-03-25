@@ -1,0 +1,10 @@
+.container {
+    min-width: 415px;
+    display: flex;
+}
+
+@media (max-width: 1550px) {
+    .container {
+        display: none !important;
+    }
+}

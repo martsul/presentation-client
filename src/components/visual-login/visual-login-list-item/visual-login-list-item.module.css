@@ -1,0 +1,10 @@
+.imgContainer {
+    height: 68px;
+    width: 68px;
+    border-radius: 14px;
+    border: 2px solid #F34213;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
