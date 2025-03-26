@@ -2,11 +2,41 @@
     display: grid;
     grid-template-columns: minmax(auto, 60%) minmax(550px, 40%);
     min-height: 100vh;
+    position: relative;
 }
 
+.pc, .firstCloud, .secondCloud {
+    display: none;
+}
 
 @media (max-width: 1000px) {
     .container {
         grid-template-columns: 1fr;
+        background: #5855EE;
+    }
+
+    .pc, .firstCloud, .secondCloud {
+        display: inline-block;
+        position: absolute;
+    }
+
+    .pc {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 0;
+    }
+
+    .firstCloud {
+        width: 200px;
+        transform: scaleX(-1);
+        top: 50px;
+        right: 50px;
+    }
+
+    .secondCloud {
+        width: 250px;
+        left: 50px;
+        top: 180px;
     }
 }

@@ -1,0 +1,31 @@
+.imgContainer {
+    max-width: 800px;
+    position: relative;
+    align-self: end;
+}
+
+.title {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    width: 460px;
+    position: relative;
+    top: -40px;
+}
+
+@media (max-width: 1200px) {
+    .imgContainer {
+        position: absolute;
+        left: 0;
+    }
+}
+
+@media (max-width: 574px) {
+    .title {
+        font-size: 28px;
+        width: max-content;
+        max-width: 220px;
+        white-space: wrap;
+    }
+}
+

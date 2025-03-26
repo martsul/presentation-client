@@ -3,7 +3,7 @@ import { UserContext } from ".";
 
 class User {
     constructor(name) {
-        this.userName = name;
+        this.name = name;
     }
 }
 
@@ -11,11 +11,16 @@ export const UserContextProvider = ({ children }) => {
     const [user, setUser] = useState();
 
     const createUser = (name) => {
-        setUser(new User(name));
+        const user = new User(name);
+        setUser(user);
+    };
+
+    const deleteUser = () => {
+        setUser();
     };
 
     return (
-        <UserContext.Provider value={{ user, createUser }}>
+        <UserContext.Provider value={{ user, createUser, deleteUser }}>
             {children}
         </UserContext.Provider>
     );

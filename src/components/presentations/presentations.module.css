@@ -1,0 +1,52 @@
+.container {
+    margin: 20px;
+    padding: 20px;
+    background: #5855EE;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 40px);
+}
+
+.circle, .circle::before, .circle::after {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #ffffff0d;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.circle::after, .circle::before {
+    content: "";
+    left: 50%;
+    top: 50%;
+}
+
+.circle {
+    width: 445px;
+    height: 445px;
+    left: 100%;
+    top: 100%;
+}
+
+.circle::after {
+    width: 610px;
+    height: 610px;
+}
+
+.circle::before {
+    width: 775px;
+    height: 775px;
+}
+
+.content {
+    overflow: auto;
+    height: calc(100% - 40px);
+    scrollbar-width: none;
+}
+
+@media (max-width: 575px) {
+    .content {
+        height: calc(100% - 95px);
+    }
+}
